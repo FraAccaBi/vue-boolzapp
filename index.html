@@ -20,9 +20,11 @@
             <div class="container">
                 <div class="row gx-0">
                     <div class="col-4">
-                        <div class="header box pt-2 ps-n5">
+                        <div class="header pt-2 ps-n5">
                             <div class="d-flex align-items-center justify-content-around">
-                                <div class="avatar-img"></div>
+                                <div class="avatar-img">
+                                    <img src="./assets/img/avatar_io.jpg" alt="">
+                                </div>
                                 <div class="chat-text">
                                     <div class="name-chat">Sofia</div>
                                 </div>
@@ -42,30 +44,27 @@
                             <i class="fas fa-search    ps-3"></i>
                             <div>Cerca o inizia una nuova chat</div>
                         </div>
-                        <div class="chats">
-                            <div class="chat d-flex align-items-center justify-content-around">
+                        <ul class="chats list-unstyled" v-for="(chat, index) in contacts">
+                            <li class="chat d-flex align-items-center justify-content-around ">
+                                
+                                
+                                    <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="" class="avatar-img">
+                                
+                                <div class="chat-text">
+                                    <div class="name-chat">{{contacts[index].name}}</div>
+                                    <div class="last-message">Ultimo messaggio inviato</div>
+                                </div>
+                                <div class="chat-time align-self-start">11:12</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-8">
+                        <div class="header pt-2 ps-n5">
+                            <div class="d-flex align-items-center justify-content-around">
                                 <div class="avatar-img"></div>
                                 <div class="chat-text">
                                     <div class="name-chat">Michele</div>
                                     <div class="last-message">ultimo messagio</div>
-                                </div>
-                                <div class="chat-time align-self-start">11:12</div>
-                            </div>
-                            <div class="chat"></div>
-                            <div class="chat"></div>
-                            <div class="chat"></div>
-                            <div class="chat"></div>
-                            <div class="chat"></div>
-                            <div class="chat"></div>
-                            <div class="chat"></div>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="header box pt-2 ps-n5">
-                            <div class="d-flex align-items-center justify-content-around">
-                                <div class="avatar-img"></div>
-                                <div class="chat-text">
-                                    <div class="name-chat">Sofia</div>
                                 </div>
                                 <i class="fa-solid fa-circle-notch"></i>
                                 <i class="fa-solid fa-message"></i>

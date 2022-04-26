@@ -10,6 +10,7 @@ copiatela cosí com'é e non fate modifiche a quello che contiene, c'é giá tut
 const app = new Vue({
     el: '#app',
     data: {
+        activeIndex: 0,
         contacts: [
         {
             name: 'Michele',
@@ -172,5 +173,9 @@ const app = new Vue({
                 }
             ],
         }
-    ]}
+    ]},
+    methods: {
+        
+    }
 });
+
