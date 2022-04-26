@@ -45,7 +45,7 @@
                             <div>Cerca o inizia una nuova chat</div>
                         </div>
                         <ul class="chats list-unstyled" >
-                            <li v-for="(chat, index) in contacts" class="chat d-flex align-items-center justify-content-around" :class="index === activeIndex ? 'active' : ''">
+                            <li v-for="(chat, index) in contacts" class="chat d-flex align-items-center justify-content-around" :class="index === activeIndex ? 'active' : ''" @click="openChat(index)">
                                 
                                 
                                     <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="" class="avatar-img">
