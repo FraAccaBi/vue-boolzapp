@@ -44,8 +44,8 @@
                             <i class="fas fa-search    ps-3"></i>
                             <div>Cerca o inizia una nuova chat</div>
                         </div>
-                        <ul class="chats list-unstyled" v-for="(chat, index) in contacts">
-                            <li class="chat d-flex align-items-center justify-content-around ">
+                        <ul class="chats list-unstyled" >
+                            <li v-for="(chat, index) in contacts" class="chat d-flex align-items-center justify-content-around" :class="index === activeIndex ? 'active' : ''">
                                 
                                 
                                     <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="" class="avatar-img">
