@@ -9,6 +9,7 @@
     --message-sent-bg: #D5F9BA; 
 }
 
+/* #region background */
 
 .fluid-header{
     background-color: var(--bg-header);
@@ -19,8 +20,32 @@
     height: 85vh;
     
 }
+
+/* #endregion background */
+
+/* #region common */
 .header{
     background-color: var(--main-header-color);
-    height: 50px;
+    height: 60px;
     margin-top: 1.5rem;
 }
+
+/* #endregion common */
+
+/* #region left-column */
+
+.notification{
+    background-color: var(--notification-color);
+    height: 65px;
+}
+
+.search{
+    background-color: #ffffff;
+    height: 55px;
+}
+.chat{
+    background-color: #ffffff;
+    height: 60px;
+}
+
+/* #endregion left-column */
