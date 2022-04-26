@@ -71,11 +71,9 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                        <div class="main-chat" v-for="messages in contacts">
-                            <div v-for="message in messages">
-                                {{message}}
-                            </div>
-
+                        <div class="main-chat" v-for="person in contacts">
+                            <div v-for="message in person.messages">{{message}}</div>
+                                
                         </div>
                         <div class="footer d-flex align-items-center justify-content-around">
                             <i class="fa-regular fa-face-smile"></i>

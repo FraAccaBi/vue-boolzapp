@@ -45,11 +45,11 @@
     background-color: #EEEFEF!important;
 }
 
-.my-messages{
+.sent{
     background-color: var(--message-sent-bg);
     border-radius: 0.5rem;
 }
-.to-me-messages{
+.received{
     background-color: white;
     border-radius: 0.5rem;
 }
