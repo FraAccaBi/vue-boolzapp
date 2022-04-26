@@ -8,7 +8,9 @@
     --message-bar-color: #F3EEEA;
     --message-sent-bg: #D5F9BA; 
 }
-
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
 /* #region background */
 
 .fluid-header{
@@ -29,6 +31,9 @@
     height: 60px;
     margin-top: 1.5rem;
 }
+.chat-text>.last-message, .chat-time, .fa-circle-notch, .fa-message, .fa-ellipsis-vertical{
+    color: var(--main-secondary-text-color);
+}
 
 /* #endregion common */
 
@@ -38,12 +43,31 @@
     background-color: var(--notification-color);
     height: 65px;
 }
+.notification-text{
+    margin-left: -1rem;
+}
+.notification .last-message{
+    color: var(--main-secondary-text-color);
+    font-size: smaller;
+    text-decoration: underline;
+}
+.fa-bell-slash{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 100%;
+    color: var(--notification-color);
+}
 
 .search{
     background-color: #ffffff;
     height: 55px;
+    color: var(--main-secondary-text-color);
+    padding-left: 1rem;
 }
-
+.header .avatar-img{
+    margin-left: -0.2rem;
+    margin-right: -1.5rem;
+}
 
 /* #region chat */
 .chat{
@@ -55,7 +79,13 @@
     height: 45px;
     width: 45px;
     border-radius: 100%;
+    margin-left: 1rem;
 }
+
+.chat-text{
+    padding-right: 11rem;
+}
+
 /* #endregion chat */
 
 
