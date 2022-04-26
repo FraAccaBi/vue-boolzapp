@@ -1,0 +1,26 @@
+:root{
+    --notification-color: #8EDAFC;
+    --bg-color: #DBDBD3;
+    --bg-header: #009688;
+    --main-header-color: #EAEAEA;
+    --main-secondary-text-color: #B1B1B1;
+    --main-primary-text-color: #000000;
+    --message-bar-color: #F3EEEA;
+    --message-sent-bg: #D5F9BA; 
+}
+
+
+.fluid-header{
+    background-color: var(--bg-header);
+    height: 15vh;
+}
+.fluid-main{
+    background-color: var(--bg-color);
+    height: 85vh;
+    
+}
+.header{
+    background-color: var(--main-header-color);
+    height: 50px;
+    margin-top: 1.5rem;
+}
