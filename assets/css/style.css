@@ -43,9 +43,20 @@
     background-color: #ffffff;
     height: 55px;
 }
+
+
+/* #region chat */
 .chat{
     background-color: #ffffff;
     height: 60px;
 }
+.avatar-img{
+    background-color: #000000;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+}
+/* #endregion chat */
+
 
 /* #endregion left-column */
