@@ -44,6 +44,15 @@
 .active{
     background-color: #EEEFEF!important;
 }
+
+.my-messages{
+    background-color: var(--message-sent-bg);
+    border-radius: 0.5rem;
+}
+.to-me-messages{
+    background-color: white;
+    border-radius: 0.5rem;
+}
 /* #endregion common */
 
 /* #region left-column */
