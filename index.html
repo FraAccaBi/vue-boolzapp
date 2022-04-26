@@ -45,7 +45,7 @@
                             <div>Cerca o inizia una nuova chat</div>
                         </div>
                         <ul class="chats list-unstyled" >
-                            <li v-for="(chat, index) in contacts" class="chat d-flex align-items-center justify-content-around" :class="index === activeIndex ? 'active' : ''" @click="openChat(index)">
+                            <li v-for="(chat, index) in contacts" class="chat d-flex align-items-center justify-content-around" :class="index === activeIndex ? 'active' : ''" @click="openChat(index)" @click="activeChat(chat)">
                                 
                                 
                                     <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="" class="avatar-img">
@@ -71,8 +71,8 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                        <div class="main-chat" v-for="person in contacts">
-                            <div v-for="message in person.messages">{{message}}</div>
+                        <div class="main-chat" v-for="person in contacts.messages" :class="person. status === 'sent' ? 'sent' : 'received' ">
+                            {{person.message}}</div>
                                 
                         </div>
                         <div class="footer d-flex align-items-center justify-content-around">

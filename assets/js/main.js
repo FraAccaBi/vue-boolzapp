@@ -11,6 +11,7 @@ const app = new Vue({
     el: '#app',
     data: {
         activeIndex: 0,
+        currentChat: [],
         contacts: [
         {
             name: 'Michele',
@@ -176,7 +177,17 @@ const app = new Vue({
     ]},
     methods: {
         openChat(index){
-                this.activeIndex = index
+            this.activeIndex = index
+        },
+        activeChat(person){
+            this.currentChat = []
+            this.currentChat.push(person)
+
+            contact.messages.forEach(message_info => {
+                message_info.hour = message_info.date.slice(11, message_info.date.length - 3)
+            });
+
+            console.log(this.currentChat);
         }
     }
 });
