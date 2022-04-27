@@ -71,8 +71,8 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                        <div class="main-chat" v-for="person in contacts.messages" :class="person. status === 'sent' ? 'sent' : 'received' ">
-                            {{person.message}}</div>
+                        <div class="main-chat" v-for="(element, index) in contacts" :class="element.status === 'sent' ? 'sent' : 'received' ">
+                            {{element.messages[activeIndex].message}}</div>
                                 
                         </div>
                         <div class="footer d-flex align-items-center justify-content-around">

@@ -179,16 +179,6 @@ const app = new Vue({
         openChat(index){
             this.activeIndex = index
         },
-        activeChat(person){
-            this.currentChat = []
-            this.currentChat.push(person)
-
-            contact.messages.forEach(message_info => {
-                message_info.hour = message_info.date.slice(11, message_info.date.length - 3)
-            });
-
-            console.log(this.currentChat);
-        }
     }
 });
 
