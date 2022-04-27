@@ -215,6 +215,17 @@ const app = new Vue({
             }
             //console.log(newSentMess);
             this.contacts[i].messages.push(newSentMess)
+
+            setTimeout(() => {
+                let newReceivedMessage = {
+                    date: `${timeStamp[1]}/${timeStamp[0]}/${timeStamp[2]} ${timeStamp[3]}:${timeStamp[4] + 1}:${timeStamp[5]}`,
+                    message: 'ok',
+                    status: 'received'
+                }
+
+                this.contacts[i].messages.push(newReceivedMessage)
+
+            }, 1000)
             
         }
 
