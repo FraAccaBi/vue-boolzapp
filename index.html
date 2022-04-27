@@ -81,7 +81,7 @@
                         
                         <div class="footer d-flex align-items-center justify-content-around">
                             <i class="fa-regular fa-face-smile"></i>
-                            <input class="input-text  form-control border-0 rounded px-3" type="text" placeholder="Scrivi un messaggio" v-model="newMess" v-on:keyup.enter="newMessage">
+                            <input class="input-text  form-control border-0 rounded px-3" type="text" placeholder="Scrivi un messaggio" v-model="newMess" v-on:keyup.enter="newMessage(activeChat)">
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>

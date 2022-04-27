@@ -203,8 +203,16 @@ const app = new Vue({
         openChat(index){
             this.activeIndex = index
         },
-        newMessage(){
+        newMessage(i){
             console.log(this.newMess)
+            let today = new Date()
+            timeStamp = [today.getMonth(), today.getDate(), today.getFullYear(), today.getHours(), today.getMinutes()]
+            let newSentMess = {
+                date: `${timeStamp[1]}/${timeStamp[0]}/${timeStamp[2]} ${timeStamp[3]}:${timeStamp[4]}`,
+                message: this.newMess,
+                status: 'sent'
+            }
+            console.log(newSentMess);
         }
 
     }
