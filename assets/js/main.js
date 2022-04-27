@@ -230,9 +230,12 @@ const app = new Vue({
             
         },
         nameSearch(){
+            /* let contacts = this.contacts;
+            let nameSearched = this.nameSearched; */
             this.contacts.forEach(contact => {
-                if (contacts.name.toLoverCase().includes(this.nameSearched.toLoverCase())) {
+                if (contact.name.toLowerCase().includes(this.nameSearched.toLowerCase())) {
                     contact.visible = true
+                    console.log(contact.name);
                 } else {
                     contact.visible = false
                 }
