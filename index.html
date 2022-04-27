@@ -73,7 +73,7 @@
                         <div class="main-chat d-flex flex-column" >
                             <div class="chat d-flex align-items-center m-2 " v-for="(text, i) in contacts[activeIndex].messages"    :class="text.status === 'sent'?  'sent_message' : 'received_message'" >
                                 {{text.message}}
-                                <span style="font-size: small;">{{text.date.slice(11, 16)}} </span>
+                                <span style="font-size: small;">{{text.date}} </span>
                             </div>
                         </div>
                             
@@ -81,7 +81,7 @@
                         
                         <div class="footer d-flex align-items-center justify-content-around">
                             <i class="fa-regular fa-face-smile"></i>
-                            <input class="input-text  form-control border-0 rounded px-3" type="text" placeholder="Scrivi un messaggio" v-model="newMess" v-on:keyup.enter="newMessage(activeChat)">
+                            <input class="input-text  form-control border-0 rounded px-3" type="text" placeholder="Scrivi un messaggio" v-model="newMess" v-on:keyup.enter="newMessage(activeIndex)">
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>
