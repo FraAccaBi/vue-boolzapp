@@ -232,6 +232,19 @@ const app = new Vue({
         nameSearch(){
             nameSearched = this.nameSearched
             console.log(this.nameSearched);
+            let arrayNameSearched = []
+
+            for (let i = 0; i < nameSearched.length; i++) {
+                const letter = nameSearched[i];
+                arrayNameSearched.push(letter)
+                /* if(letter === ){
+
+                } */
+
+            }
+            console.log(arrayName);
+            
+            
         }
 
     }

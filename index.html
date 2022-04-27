@@ -60,8 +60,8 @@
                             <div class="d-flex align-items-center justify-content-start">
                                 <img :src="'./assets/img/avatar' + contacts[activeIndex].avatar + '.jpg'" alt="" class="avatar-img">
                                 <div class="chat-text">
-                                    <div class="name-active">Michele</div>
-                                    <div class="last-message">ultimo messagio</div>
+                                    <div class="name-active">{{contacts[activeIndex].name}}</div>
+                                    <div class="last-message">ultimo accesso alle {{contacts[activeIndex].messages[contacts[activeIndex].messages.length -1].date.slice(10, 16)}}</div>
                                 </div>
                                 <div class="icons">
                                     <i class="fa-solid fa-circle-notch"></i>
