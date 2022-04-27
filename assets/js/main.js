@@ -239,8 +239,10 @@ const app = new Vue({
                 } else {
                     contact.visible = false
                 }
+                
             });
-            
+            let contacts = this.contacts
+            console.log(contacts)
             
         }
 

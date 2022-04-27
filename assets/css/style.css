@@ -46,7 +46,9 @@
 .active{
     background-color: #EEEFEF!important;
 }
-
+.display-none{
+    display: none;
+}
 
 /* #endregion common */
 
