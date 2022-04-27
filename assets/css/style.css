@@ -7,6 +7,7 @@
     --main-primary-text-color: #000000;
     --message-bar-color: #F3EEEA;
     --message-sent-bg: #D5F9BA; 
+    --message-received-bg: white;
 }
 *{
     font-family: Arial, Helvetica, sans-serif;
@@ -45,12 +46,13 @@
     background-color: #EEEFEF!important;
 }
 
-.sent{
+.sent_message{
     background-color: var(--message-sent-bg);
     border-radius: 0.5rem;
 }
-.received{
-    background-color: white;
+.received_message{
+    
+    background-color: var(--message-received-bg);
     border-radius: 0.5rem;
 }
 /* #endregion common */
@@ -90,7 +92,6 @@
 
 /* #region chat */
 .chat{
-    background-color: #ffffff;
     height: 60px;
 }
 .avatar-img{

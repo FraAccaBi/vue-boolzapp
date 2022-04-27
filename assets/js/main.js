@@ -179,6 +179,9 @@ const app = new Vue({
         openChat(index){
             this.activeIndex = index
         },
+        display(){
+            console.log(this.status)
+        }
     }
 });
 
