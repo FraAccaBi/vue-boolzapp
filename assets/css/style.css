@@ -91,8 +91,19 @@
 }
 
 /* #region chat */
-.chat{
+.chat-preview{
+    background-color: white;
     height: 60px;
+}
+.chat{
+    height: 50px;
+    position: relative;
+}
+.chat>span{
+    color: var(--main-secondary-text-color);
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
 }
 .avatar-img{
     background-color: #000000;
