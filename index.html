@@ -22,13 +22,13 @@
                     <div class="col-4">
                         <div class="header pt-2 ps-n5">
                             <div class="d-flex align-items-center justify-content-around">
-                                <div class="avatar-img">
+                                <div class="avatar-img me-5">
                                     <img src="./assets/img/avatar_io.jpg" alt="">
                                 </div>
-                                <div class="chat-text">
+                                <div class="chat-text me-5">
                                     <div class="name-chat">Sofia</div>
                                 </div>
-                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-circle-notch ms-5"></i>
                                 <i class="fa-solid fa-message"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
@@ -45,36 +45,35 @@
                             <div>Cerca o inizia una nuova chat</div>
                         </div>
                         <ul class="chats list-unstyled" >
-                            <li v-for="(chat, index) in contacts" class="chat-preview d-flex align-items-center justify-content-around" :class="index === activeIndex ? 'active' : ''" @click="openChat(index)" @click="activeChat(chat)">
-                                
-                                
-                                    <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="" class="avatar-img">
-                                
+                            <li v-for="(chat, index) in contacts" class="chat-preview d-flex align-items-center" :class="index === activeIndex ? 'active' : ''" @click="openChat(index)" @click="activeChat(chat)">
+                                <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="" class="avatar-img">
                                 <div class="chat-text">
                                     <div class="name-chat">{{contacts[index].name}}</div>
-                                    <div class="last-message">Ultimo messaggio inviato</div>
+                                    <div class="last-message" style="font-size: small;">{{contacts[index].messages[contacts[index].messages.length -1].message}} </div>
                                 </div>
-                                <div class="chat-time align-self-start">11:12</div>
+                                <div class="chat-time align-self-start" style="font-size: small;">{{contacts[index].messages[contacts[index].messages.length -1].date.slice(11, 16)}}</div>
                             </li>
                         </ul>
                     </div>
                     <div class="col-8">
                         <div class="header pt-2 ps-n5">
-                            <div class="d-flex align-items-center justify-content-around">
-                                <div class="avatar-img"></div>
+                            <div class="d-flex align-items-center justify-content-start">
+                                <img :src="'./assets/img/avatar' + contacts[activeIndex].avatar + '.jpg'" alt="" class="avatar-img">
                                 <div class="chat-text">
-                                    <div class="name-chat">Michele</div>
+                                    <div class="name-active">Michele</div>
                                     <div class="last-message">ultimo messagio</div>
                                 </div>
-                                <i class="fa-solid fa-circle-notch"></i>
-                                <i class="fa-solid fa-message"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                <div class="icons">
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                    <i class="fa-solid fa-message px-2"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="main-chat d-flex flex-column" >
                             <div class="chat  d-flex align-items-center m-2 " v-for="(text, i) in contacts[activeIndex].messages"    :class="text.status === 'sent'?  'sent_message' : 'received_message'" @click="display">
                                 {{text.message}}
-                                <span>{{text.date.slice(11, 16)}} </span>
+                                <span style="font-size: small;">{{text.date.slice(11, 16)}} </span>
                             </div>
                         </div>
                             
@@ -82,7 +81,7 @@
                         
                         <div class="footer d-flex align-items-center justify-content-around">
                             <i class="fa-regular fa-face-smile"></i>
-                            <input class="input-text border-0 rounded" type="text" placeholder="Scrivi un messaggio">
+                            <input class="input-text border-0 rounded px-3" type="text" placeholder="Scrivi un messaggio">
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>

@@ -64,11 +64,18 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
 .fa-bell-slash{
     background-color: white;
     padding: 1rem;
     border-radius: 100%;
     color: var(--notification-color);
+}
+.col-4 .fa-circle-notch{
+    margin-right: -2rem;
+}
+.col-4 .fa-message{
+    margin-right: -2rem;
 }
 
 .search{
@@ -81,11 +88,25 @@
     margin-left: -0.2rem;
     margin-right: -1.5rem;
 }
+.header .name-chat{
+    margin-left: -2.5rem;
+}
+
 
 /* #region chat */
 .chat-preview{
     background-color: white;
     height: 60px;
+    padding-left: 2rem;
+    position: relative;
+}
+.chat-preview .chat-text{
+    padding-left: 4.5rem;
+}
+.chat-preview .chat-time{
+    position: absolute;
+    top: 7px;
+    right: 7px;
 }
 .chat{
     width: calc(100% / 2);
@@ -112,11 +133,9 @@
 }
 
 .avatar-img{
-    background-color: #000000;
     height: 45px;
     width: 45px;
     border-radius: 100%;
-    margin-left: 1rem;
 }
 
 .chat-text{
@@ -150,5 +169,24 @@
 .input-text{
     width: 82%;
     height: 45px;
+}
+
+.col-8{
+   position: relative;
+}
+.col-8 .chat-text{
+    margin-left: 2.5rem;
+}
+.col-8 img{
+    margin-left: 1rem;
+}
+.col-8 .icons{
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+}
+
+.col-8 .avatar-img{
+    margin-left: 1rem;
 }
 /* #endregion main */
