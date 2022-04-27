@@ -45,7 +45,7 @@
                             <input type="nameSearched" v-model="nameSearched" class="border-0 w-75" type="text" placeholder="Cerca o inizia una nuova chat" v-on:keyup.enter="nameSearch">
                         </div>
                         <ul class="chats list-unstyled" >
-                            <li v-for="(chat, index) in contacts" class="chat-preview d-flex align-items-center" :class="index === activeIndex ? 'active' : ''" @click="openChat(index)" @click="activeChat(chat)">
+                            <li v-for="(chat, index) in contacts" class="chat-preview d-flex align-items-center" :class="index === activeIndex ? 'active' : ''" @click="openChat(index)" @click="activeChat(chat)" :class="contacts.visible !== true ? 'd-none' : '' ">
                                 <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="" class="avatar-img">
                                 <div class="chat-text">
                                     <div class="name-chat">{{contacts[index].name}}</div>
