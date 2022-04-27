@@ -36,6 +36,7 @@ const app = new Vue({
     data: {
         activeIndex: 0,
         newMess: '',
+        nameSearched: '',
         contacts: [
         {
             name: 'Michele',
@@ -218,7 +219,7 @@ const app = new Vue({
 
             setTimeout(() => {
                 let newReceivedMessage = {
-                    date: `${timeStamp[1]}/${timeStamp[0]}/${timeStamp[2]} ${timeStamp[3]}:${timeStamp[4] + 1}:${timeStamp[5]}`,
+                    date: `${timeStamp[1]}/${timeStamp[0]}/${timeStamp[2]} ${timeStamp[3]}:${timeStamp[4]}:${timeStamp[5] + 1}`,
                     message: 'ok',
                     status: 'received'
                 }
@@ -227,6 +228,10 @@ const app = new Vue({
 
             }, 1000)
             
+        },
+        nameSearch(){
+            nameSearched = this.nameSearched
+            console.log(this.nameSearched);
         }
 
     }
