@@ -46,15 +46,7 @@
     background-color: #EEEFEF!important;
 }
 
-.sent_message{
-    background-color: var(--message-sent-bg);
-    border-radius: 0.5rem;
-}
-.received_message{
-    
-    background-color: var(--message-received-bg);
-    border-radius: 0.5rem;
-}
+
 /* #endregion common */
 
 /* #region left-column */
@@ -96,8 +88,10 @@
     height: 60px;
 }
 .chat{
+    width: calc(100% / 2);
     height: 50px;
     position: relative;
+    padding-left: 0.8rem;
 }
 .chat>span{
     color: var(--main-secondary-text-color);
@@ -105,6 +99,18 @@
     right: 5px;
     bottom: 5px;
 }
+.sent_message{
+    align-self: flex-end;
+    background-color: var(--message-sent-bg);
+    border-radius: 0.5rem;
+    
+}
+.received_message{
+    
+    background-color: var(--message-received-bg);
+    border-radius: 0.5rem;
+}
+
 .avatar-img{
     background-color: #000000;
     height: 45px;

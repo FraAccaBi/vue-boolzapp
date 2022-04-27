@@ -71,8 +71,8 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                        <div class="main-chat" >
-                            <div class="chat  d-flex align-items-center" v-for="(text, i) in contacts[activeIndex].messages"    :class="text.status === 'sent'?  'sent_message' : 'received_message'" @click="display">
+                        <div class="main-chat d-flex flex-column" >
+                            <div class="chat  d-flex align-items-center m-2 " v-for="(text, i) in contacts[activeIndex].messages"    :class="text.status === 'sent'?  'sent_message' : 'received_message'" @click="display">
                                 {{text.message}}
                                 <span>{{text.date.slice(11, 16)}} </span>
                             </div>
