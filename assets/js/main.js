@@ -246,10 +246,8 @@ const app = new Vue({
         },
         deleteMessage(activeIndex, i){
             this.contacts[activeIndex].messages[i].message = ''
-            
-            console.log(this.contacts[activeIndex].messages[i]);
-            //removedMessage =
-        }
+        },
+
     }
 });
 
