@@ -247,6 +247,10 @@ const app = new Vue({
             
         }
 
+    },
+    mounted(){
+        console.log('mounted');
+        nameSearch()
     }
 });
 
