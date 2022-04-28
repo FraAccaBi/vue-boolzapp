@@ -244,8 +244,8 @@ const app = new Vue({
             console.log(contacts)
             
         },
-        deleteMessage(i){
-            console.log(this.contacts[i].contact);
+        deleteMessage(activeIndex, i){
+            console.log(this.contacts[activeIndex].messages[i].message);
         }
     }
 });

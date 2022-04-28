@@ -71,7 +71,7 @@
                             </div>
                         </div>
                         <div class="main-chat d-flex flex-column" >
-                            <div class="chat d-flex align-items-center m-2 " v-for="(text, i) in contacts[activeIndex].messages"    :class="text.status === 'sent'?  'sent_message' : 'received_message'" @click="deleteMessage(i)">
+                            <div class="chat d-flex align-items-center m-2 " v-for="(text, i) in contacts[activeIndex].messages"    :class="text.status === 'sent'?  'sent_message' : 'received_message'" @click="deleteMessage(activeIndex, i)">
                                 {{text.message}}
                                 <span style="font-size: small;">{{text.date.slice(11,16)}} </span>
                             </div>
