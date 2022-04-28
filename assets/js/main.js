@@ -205,21 +205,19 @@ const app = new Vue({
             this.activeIndex = index
         },
         newMessage(i){
-            //console.log(this.newMess)
-            let today = new Date()
-            timeStamp = [today.getMonth(), today.getDate(), today.getFullYear(), today.getHours(), today.getMinutes(), today.getSeconds()]
-            console.log(timeStamp);
+                        
             let newSentMess = {
-                date: `${timeStamp[1]}/${timeStamp[0]}/${timeStamp[2]} ${timeStamp[3]}:${timeStamp[4]}:${timeStamp[5]}`,
+                date: new Date().toLocaleString('it'),
                 message: this.newMess,
                 status: 'sent'
             }
             //console.log(newSentMess);
             this.contacts[i].messages.push(newSentMess)
+            this.newMess = ''
 
             setTimeout(() => {
                 let newReceivedMessage = {
-                    date: `${timeStamp[1]}/${timeStamp[0]}/${timeStamp[2]} ${timeStamp[3]}:${timeStamp[4]}:${timeStamp[5] + 1}`,
+                    date: new Date().toLocaleString('it'),
                     message: 'ok',
                     status: 'received'
                 }
