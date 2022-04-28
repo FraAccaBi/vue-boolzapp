@@ -236,6 +236,7 @@ const app = new Vue({
                     console.log(contact.name);
                 } else {
                     contact.visible = false
+                    console.log(contact.name)
                 }
                 
             });
