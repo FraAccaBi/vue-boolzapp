@@ -233,11 +233,9 @@ const app = new Vue({
             this.contacts.forEach(contact => {
                 if (contact.name.toLowerCase().includes(this.nameSearched.toLowerCase())) {
                     contact.visible = true
-                    contact.style.display = 'block'
                     console.log(contact.name);
                 } else {
                     contact.visible = false
-                    contact.style.display = 'none'
                     console.log(contact.name)
                 }
                 
@@ -245,12 +243,10 @@ const app = new Vue({
             let contacts = this.contacts
             console.log(contacts)
             
+        },
+        deleteMessage(i){
+            console.log(this.contacts[i].contact);
         }
-
-    },
-    mounted(){
-        console.log('mounted');
-        nameSearch()
     }
 });
 

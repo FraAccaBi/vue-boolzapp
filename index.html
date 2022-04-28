@@ -42,10 +42,10 @@
                         </div>
                         <div class="search d-flex align-items-center gap-4 ">
                             <i class="fas fa-search    ps-3" @click="nameSearch"></i>
-                            <input type="nameSearched" v-model="nameSearched" class="border-0 w-75" type="text" placeholder="Cerca o inizia una nuova chat" v-on:keyup.enter="nameSearch">
+                            <input type="nameSearched" v-model="nameSearched" class="border-0 w-75" type="text" placeholder="Cerca o inizia una nuova chat" v-on:keyup="nameSearch">
                         </div>
                         <ul class="chats list-unstyled" >
-                            <li v-for="(chat, index) in contacts" v-show="contacts[index].visible === true"   class="chat-preview d-flex align-items-center" :class="index === activeIndex ? 'active' : ''"  @click="openChat(index)" @click="activeChat(chat)"  >
+                            <li v-for="(chat, index) in contacts" v-if="chat.visible"   class="chat-preview d-flex align-items-center" :class="index === activeIndex ? 'active' : ''"  @click="openChat(index)" @click="activeChat(chat)"  >
                                 <img :src="'./assets/img/avatar' + contacts[index].avatar + '.jpg'" alt="" class="avatar-img">
                                 <div class="chat-text">
                                     <div class="name-chat">{{contacts[index].name}}</div>
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                         <div class="main-chat d-flex flex-column" >
-                            <div class="chat d-flex align-items-center m-2 " v-for="(text, i) in contacts[activeIndex].messages"    :class="text.status === 'sent'?  'sent_message' : 'received_message'" >
+                            <div class="chat d-flex align-items-center m-2 " v-for="(text, i) in contacts[activeIndex].messages"    :class="text.status === 'sent'?  'sent_message' : 'received_message'" @click="deleteMessage(i)">
                                 {{text.message}}
                                 <span style="font-size: small;">{{text.date.slice(11,16)}} </span>
                             </div>

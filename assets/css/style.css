@@ -97,6 +97,10 @@
 
 
 /* #region chat */
+.chats{
+    max-height: 480px;
+    background-color: white;
+}
 .chats, .main-chat {
     overflow-y: scroll;
 }
