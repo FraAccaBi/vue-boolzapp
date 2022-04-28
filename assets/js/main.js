@@ -233,9 +233,11 @@ const app = new Vue({
             this.contacts.forEach(contact => {
                 if (contact.name.toLowerCase().includes(this.nameSearched.toLowerCase())) {
                     contact.visible = true
+                    contact.style.display = 'block'
                     console.log(contact.name);
                 } else {
                     contact.visible = false
+                    contact.style.display = 'none'
                     console.log(contact.name)
                 }
                 
