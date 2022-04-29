@@ -14,7 +14,9 @@
     scroll-behavior: smooth;
 }
 /* #region background */
-
+.background{
+    height: 100vh;
+}
 .fluid-header{
     background-color: var(--bg-header);
     height: 15vh;
@@ -98,7 +100,7 @@
 
 /* #region chat */
 .chats{
-    max-height: 480px;
+    height: calc(100vh - 220px);
     background-color: white;
 }
 .chats, .main-chat {
@@ -169,7 +171,7 @@
 
 .main-chat{
     background-image: url('../img/mine.jpg');
-    height: calc(60px * 9);
+    height: calc(100vh - 160px);
 }
 .footer{
     height: 60px;
